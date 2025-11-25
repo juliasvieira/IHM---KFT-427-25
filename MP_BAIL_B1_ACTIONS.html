@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step MP_BAIL_B1 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step MP_BAIL_B1 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 5<br> <strong>Generated:</strong> 2025-11-24 08:36:36 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">MP_BAIL_B1</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Mars Pan Drive Reverse-Bailing (000285)">MPAN_BAILING_FWD_DRIVE</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Mars Pan Bail SFC Step B2  &quot;Run Pan Bail1 Speed&quot; (004026)">MP_BAIL_B2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Bail SFC Step B3  &quot;Pan Stop Selected&quot; (004027)">MP_BAIL_B3</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Bail SFC Step B4  &quot;Mars Pan is Empty&quot; (004030)">MP_BAIL_B4</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Bail SFC Step B5  &quot;Mars Pan Bail Complt (004031)">MP_BAIL_B5</span></td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L011_Mars_Pan_Run_Logic_443</td> </tr>  <tr> <td class="step-col">MP_BAIL_B1</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="HMI Message: Pan Discharge SS in AUTO Position (003863)">HMI_MESSAGE_MPAN_BAIL_INHIBIT</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Mars Pan Modes SFC Step PM7 &quot;Bail Mode&quot; (002335)">MPM_PM7</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Mars Pan Modes SFC FORCE Step PM1 &quot;Off Mode&quot; (002325)">MPM_FRC_PM1</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Discharge Auto Mode (100034)">MP_DISCH_AUTO</span></td> <td class="routine-col">HMI_Bits_and_Registers_15 - L011_HMI_MES_MP_Bail_Inhibit_In_A_316</td> </tr>  <tr> <td class="step-col">MP_BAIL_B1</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Mars Pan Bail SFC Trans B1 To B2 (004050)">MP_BAIL_B1_B2</span> <span class="keyword">IF</span><br>[<span class="tag-tooltip" title="MARS PAN AT STOPPED (005216)">MP_AT_ZERO_SPEED</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Discharge Bail Mode (100035)">MP_DISCH_BAIL</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Discharge Chute Open to Scrap Bucket (100102)">MPAN_DVERTER_SCRAP</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="HMI Operator Cancel Bail Request (003900)">HMI_CANCEL_BAIL_RQ</span>]<br><br><span class="action-separator"></span><br><span class="keyword">SET</span> <span class="tag-tooltip" title="Mars Pan Bail Trans B1 to B5 (004062)">MP_BAIL_B1_B5</span> <span class="keyword">IF</span><br>[<span class="tag-tooltip" title="MARS PAN AT STOPPED (005216)">MP_AT_ZERO_SPEED</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Discharge Bail Mode (100035)">MP_DISCH_BAIL</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Discharge Chute Open to Scrap Bucket (100102)">MPAN_DVERTER_SCRAP</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="HMI Operator Cancel Bail Request (003900)">HMI_CANCEL_BAIL_RQ</span>]</td> <td class="routine-col">Mars_Pan_CleanIn_Place_Bail_16 - L016_Pan_Bail_SFC_Stp_B1_Fans_Pan_373</td> </tr>  <tr> <td class="step-col">MP_BAIL_B1</td> <td class="action-col"><span class="keyword">CLEAR</span> <span class="tag-tooltip" title="Main Air Fan Speed Setpoint (405588)">MAFAN_SPD_SETP</span> <span class="keyword">IF</span> <span class="keyword"><span class="tag-tooltip" title="Tag: ONE">ONE</span>-<span class="tag-tooltip" title="Tag: SHOT">SHOT</span></span>[xONS.x[619]]<br><span class="keyword">CLEAR</span> <span class="tag-tooltip" title="Mars Pan Speed Setpoint (405587)">MP_SPD_SETP</span> <span class="keyword">IF</span> <span class="keyword"><span class="tag-tooltip" title="Tag: ONE">ONE</span>-<span class="tag-tooltip" title="Tag: SHOT">SHOT</span></span>[xONS.x[619]]<br><span class="keyword">CLEAR</span> <span class="tag-tooltip" title="AIR TEMP - PID Output (409323)">A_TPID_MV</span> <span class="keyword">IF</span> <span class="keyword"><span class="tag-tooltip" title="Tag: ONE">ONE</span>-<span class="tag-tooltip" title="Tag: SHOT">SHOT</span></span>[xONS.x[619]]</td> <td class="routine-col">Mars_Pan_CleanIn_Place_Bail_16 - L016_Pan_Bail_SFC_Stp_B1_Fans_Pan_373</td> </tr>  <tr> <td class="step-col">MP_BAIL_B1</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Pan Scrap Bail Is In Progress (002174)">CS_SCRAP_BAIL</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Mars Pan Bail SFC Step B2  &quot;Run Pan Bail1 Speed&quot; (004026)">MP_BAIL_B2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Bail SFC Step B3  &quot;Pan Stop Selected&quot; (004027)">MP_BAIL_B3</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Bail SFC Step B4  &quot;Mars Pan is Empty&quot; (004030)">MP_BAIL_B4</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Bail SFC Step B5  &quot;Mars Pan Bail Complt (004031)">MP_BAIL_B5</span></td> <td class="routine-col">Recipe_Validation_Manipulation_3 - L013_Pan_Scrap_Bail_In_Progress_41</td> </tr>  </tbody> </table> </body> </html> 

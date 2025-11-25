@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step SPF_PF8 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step SPF_PF8 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 4<br> <strong>Generated:</strong> 2025-11-24 08:21:03 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">SPF_PF8</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Summation for SOL34 Hot Syrup Supply Valve (004575)">DV_SOL34_STORE</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MP Early FIll Shot Pot during load cycle (002449)">MS_EARYFILLSHOTPOT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Master Seq SFC Step P11 - Refill Shot Pot (002463)">MS_P11_TOPOFF</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.7 &quot;Spray Syrup&quot; (002831)">PR_P4_8_7</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.19 &quot;Exec A Wash&quot; (002843)">PR_P4_8_19</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Pan System Reinitialize (000568)">PANSYS_REINIT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Summation for SOL34 Hot Syrup Supply Valve (004575)">DV_SOL34_STORE</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="MPR Prime  SFC Step PR5 &quot;Close Tank To 3way&quot; (002679)">PRI_PR5</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 7-Close Recirc Lines (002967)">AS_7_CLS_RECIRCLINES</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 19-Close Recirc Line (002979)">AS_19_CLS_RECIRCLINES</span></td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L080_SHOT_POT_TO_DISCH_DEV_CONTRO_512</td> </tr>  <tr> <td class="step-col">SPF_PF8</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Summation for SOL37 Hot Syrup Shot Pump toRecirculation (004576)">DV_SOL37_STORE</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MP Early FIll Shot Pot during load cycle (002449)">MS_EARYFILLSHOTPOT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Master Seq SFC Step P11 - Refill Shot Pot (002463)">MS_P11_TOPOFF</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.19 &quot;Exec A Wash&quot; (002843)">PR_P4_8_19</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.8 &quot;Retract Spray Arm&quot; (002832)">PR_P4_8_8</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="MPR Prime  SFC Step PR5 &quot;Close Tank To 3way&quot; (002679)">PRI_PR5</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="MPR B Wash  SFC Step BW2 &quot;Washing&quot; (002751)">BW_BW2</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="MPR B Wash  SFC Step BW3 &quot;Draining&quot; (002752)">BW_BW3</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Delay Closing of SOL37 Until SOL36 Limit Confirm (004578)">DV_SOL_37_CLS_DLAY</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Pan System Reinitialize (000568)">PANSYS_REINIT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR B Wash  SFC Step BW4 &quot;Close Drain&quot; (002753)">BW_BW4</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Summation for SOL37 Hot Syrup Shot Pump toRecirculation (004576)">DV_SOL37_STORE</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 7-Close Recirc Lines (002967)">AS_7_CLS_RECIRCLINES</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 19-Close Recirc Line (002979)">AS_19_CLS_RECIRCLINES</span></td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L090_Shot_Pot_Recirc_Valve_Contro_522</td> </tr>  <tr> <td class="step-col">SPF_PF8</td> <td class="action-col"><span class="keyword">MOVE</span> 8 <span class="keyword">TO</span> SPFillSeq_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">SPF_PF8</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Shot Pot Fill SFC Trans PF3 To PF4 (003097)">SPF_PF3_PF4</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Syrup Shot Pot Valve Open to Discharge (100052)">SSP_DISCH_OLS</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Syrup Shot Pot Pump Valve Open to Recirculate Potion (100058)">SSP_RECIRC_OLS</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Shot_Pot_Fill_9 - L008_POT_FILL_SFC_STP_PF8_Recirc_x_189</td> </tr>  </tbody> </table> </body> </html> 

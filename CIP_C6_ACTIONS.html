@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step CIP_C6 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step CIP_C6 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 2<br> <strong>Generated:</strong> 2025-11-24 08:38:40 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">CIP_C6</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="CIP Control of SOL6: Open Spray Arm Doors (004580)">CIP_CTRL_OF_SOL6</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Clean In Place SFC Step C2 &quot;CIP STARTUP&quot; (003976)">CIP_C2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Clean In Place SFC Step C3 &quot;Spray Arm Extended&quot; (003977)">CIP_C3</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Clean In Place SFC Step C4 &quot;Spray Arm B Wash Val&quot; (003978)">CIP_C4</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Clean In Place SFC Step C5 &quot;Dwell and Clean&quot; (003979)">CIP_C5</span></td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L031_Spray_Arm_Doors_CNTRL_FLT_LO_463</td> </tr>  <tr> <td class="step-col">CIP_C6</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Clean In Place SFC Trans C6 to C7 (003997)">CIP_C6_C7</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Mars Pan Master Control Relay (100020)">MP_MCR</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Spray Arm Retracted (100101)">SA_RETRACTED</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Pan System Mode  Maint (000565)">PANSYS_MAINT</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Mars Pan Modes SFC FORCE Step PM1 &quot;Off Mode&quot; (002325)">MPM_FRC_PM1</span></td> <td class="routine-col">Mars_Pan_CleanIn_Place_Bail_16 - L007_CIP_SFC_Step_C6_Close_H2O_Ar_364</td> </tr>  </tbody> </table> </body> </html> 

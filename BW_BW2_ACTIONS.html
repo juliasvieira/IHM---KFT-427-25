@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step BW_BW2 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step BW_BW2 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 4<br> <strong>Generated:</strong> 2025-11-24 08:24:35 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">BW_BW2</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Open Hot Water Supply Valve Solenoid (000040)">HOT_H2O_OPEN</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Maint (000565)">PANSYS_MAINT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Tank Calibration Step TC10 &quot;Open H2O Supply Valv (004609)">TNK_CALB_TC10</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Open Tank 2 H2O Solenoid (003267)">ADDH2O</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR A Wash  SFC Step AW2 &quot;Washing&quot; (002711)">AW_AW2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 14-Open H2O to Shot Pot Val (002974)">AS_14_H2O_SSP_FILL</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 2-Open H2O Feed to Tnk 2 (002962)">AS_2_TNK2_H2O</span><br><br><span class="action-separator"></span><br><span class="keyword">SET</span> <span class="tag-tooltip" title="Hot Water Supply SOL40 On/Off (000511)">HOTH2O_ON</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Maint (000565)">PANSYS_MAINT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Tank Calibration Step TC10 &quot;Open H2O Supply Valv (004609)">TNK_CALB_TC10</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Open Tank 2 H2O Solenoid (003267)">ADDH2O</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR A Wash  SFC Step AW2 &quot;Washing&quot; (002711)">AW_AW2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 14-Open H2O to Shot Pot Val (002974)">AS_14_H2O_SSP_FILL</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 2-Open H2O Feed to Tnk 2 (002962)">AS_2_TNK2_H2O</span></td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L097_HOT_H2O_SUPPLY_VALVE_CNTRL_529</td> </tr>  <tr> <td class="step-col">BW_BW2</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Open Spray Arm &#39;B&#39; Wash Supply Solenoid (000043)">BWASH_OPEN</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Pan System Reinitialize (000568)">PANSYS_REINIT</span><br><br><span class="action-separator"></span><br><span class="keyword">SET</span> <span class="tag-tooltip" title="BWASH Supply SOL43 On/Off (000529)">BWASH_ON</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Pan System Reinitialize (000568)">PANSYS_REINIT</span></td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L103_B_WASH_SUPPLY_VALVE_CNTRL_535</td> </tr>  <tr> <td class="step-col">BW_BW2</td> <td class="action-col"><span class="keyword">MOVE</span> 2 <span class="keyword">TO</span> BWashSeq_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">BW_BW2</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MPR B Wash  SFC Trans BW2 To BW3 (002763)">BW_BW2_BW3</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="BWASH Supply SOL43 Open Limit (001311)">BWASH_SOL43_OPEN_LIMIT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Prime_A_Wash_and_B_Wash_7 - L014_x_B_WASH_SFC_STEP_BW2_Open_SO_126</td> </tr>  </tbody> </table> </body> </html> 

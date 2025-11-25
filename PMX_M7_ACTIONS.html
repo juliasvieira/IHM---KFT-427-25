@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step PMX_M7 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step PMX_M7 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 3<br> <strong>Generated:</strong> 2025-11-24 08:26:52 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">PMX_M7</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Pre Mix Stuff SFC Trans M7 to M8 (003251)">PMX_M7_M8</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="MP Syrup SFC Step P4.8.2 &quot;Exec Pre-Mix for Curre Shot&quot; (002826)">PR_P4_8_2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Current Recipe Step Requires Water (002131)">CS_H2O_REQD</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Current Recipe Step Requires TIO2 (002132)">CS_TIO2_REQD</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="MP Master Seq SFC Step 7 Execute Premix for earlShot Pot FIll (002438)">MS_P7_PREMIX</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Early FIll Shot Pot during load cycle (002449)">MS_EARYFILLSHOTPOT</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="Next Recipe Step Requires Water (002147)">NS_H2O_REQD</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Next Recipe Step Requires TIO2 (002148)">NS_TIO2_REQD</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="Shut Down Pushbutton PB (002928)">SHUTDOWN_PB</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="Excuting recipe and next shot requires syrup (002176)">NXTSHOTREQUIRESSYRUP</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.15 &quot;Exec Pre-Mix Seq forNext Shot&quot; (002839)">PR_P4_8_15</span>]]</td> <td class="routine-col">Pre_Mix_Ingredients_10 - L011_Step_7_Trans_Determine_Ingre_205</td> </tr>  <tr> <td class="step-col">PMX_M7</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Pre Mix Stuff SFC Trans M7 to M9 (003252)">PMX_M7_M9</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="MP Syrup SFC Step P4.8.2 &quot;Exec Pre-Mix for Curre Shot&quot; (002826)">PR_P4_8_2</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Current Recipe Step Requires Water (002131)">CS_H2O_REQD</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Current Recipe Step Requires TIO2 (002132)">CS_TIO2_REQD</span> <span class="keyword">OR</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Next Recipe Step Requires Water (002147)">NS_H2O_REQD</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Next Recipe Step Requires TIO2 (002148)">NS_TIO2_REQD</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="Shut Down Pushbutton PB (002928)">SHUTDOWN_PB</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="Excuting recipe and next shot requires syrup (002176)">NXTSHOTREQUIRESSYRUP</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.15 &quot;Exec Pre-Mix Seq forNext Shot&quot; (002839)">PR_P4_8_15</span>]]</td> <td class="routine-col">Pre_Mix_Ingredients_10 - L012_Step_7_Trans_Determine_Ingre_206</td> </tr>  <tr> <td class="step-col">PMX_M7</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Pre Mix Stuff SFC Trans M7 to M10 (003253)">PMX_M7_M10</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="MP Syrup SFC Step P4.8.2 &quot;Exec Pre-Mix for Curre Shot&quot; (002826)">PR_P4_8_2</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Current Recipe Step Requires Water (002131)">CS_H2O_REQD</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Current Recipe Step Requires TIO2 (002132)">CS_TIO2_REQD</span> <span class="keyword">OR</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Next Recipe Step Requires Water (002147)">NS_H2O_REQD</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Next Recipe Step Requires TIO2 (002148)">NS_TIO2_REQD</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="Excuting recipe and next shot requires syrup (002176)">NXTSHOTREQUIRESSYRUP</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.15 &quot;Exec Pre-Mix Seq forNext Shot&quot; (002839)">PR_P4_8_15</span>]]</td> <td class="routine-col">Pre_Mix_Ingredients_10 - L013_Step_7_Trans_Determine_Ingre_207</td> </tr>  </tbody> </table> </body> </html> 

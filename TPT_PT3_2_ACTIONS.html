@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step TPT_PT3_2 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step TPT_PT3_2 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 5<br> <strong>Generated:</strong> 2025-11-24 08:49:57 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">TPT_PT3_2</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Polishing Tube Drive MS3 Rev/Stop (000326)">PTUBE_REV</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Polishing Tube System Mode  Auto (000569)">PTSYS_AUT</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Polishing Tube Drive MS3 Fault/Reset (000324)">PTUBE_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Polishing Tube Disconnect Open (100009)">PTUBE_DISC</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="From Blending Outfeed Conveyor Running (004377)">FROM_BLND_OUTFD_RUNNING</span></td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L025_POLISHING_TUBE_DRIVE_DIRECTI_457</td> </tr>  <tr> <td class="step-col">TPT_PT3_2</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="HMI Ms:Loss of BLND System Xfer Go Signal (001380)">HMI_ARM_BAIL_BLND_BAD</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Polishing Tube System Mode  Auto (000569)">PTSYS_AUT</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="From BLND Xfer PTube Product to blending Request (004371)">FRM_BLND_XFFER_PTUBE_GO</span></td> <td class="routine-col">HMI_Bits_and_Registers_15 - L020_BLND_Xfer_Signal_While_Bail_x_325</td> </tr>  <tr> <td class="step-col">TPT_PT3_2</td> <td class="action-col"><span class="keyword">MOVE</span> 2 <span class="keyword">TO</span> XferPTubeConv_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Polishing Tube System Mode  Auto (000569)">PTSYS_AUT</span></td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">TPT_PT3_2</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="PT Master Seq SFC Step PT3 &quot;Exec Trans to Conv&quot; (004186)">PMS_PT3</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="PT to Conv  SFC Step PT3.1 &quot;Wait Transfer&quot; (004300)">TPT_PT3_1</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="PT to Conv  SFC Step PT3.3 &quot;Stop Tube&quot; (004302)">TPT_PT3_3</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="PT to Conv  SFC Step PT3.4 &quot;Transfer Complete&quot; (004303)">TPT_PT3_4</span></td> <td class="routine-col">Polishing_TubeModes_and_Maste_17 - L013_PT_MASTER_PT3_Xecute_Tube_Xf_391</td> </tr>  <tr> <td class="step-col">TPT_PT3_2</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="PT to Conv  SFC Trans PT3.2 To PT3.3 (004313)">TPT_PT3_2_PT3_3</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Polishing Tube Master Control Relay (100070)">PTUBEMCR</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="From BLND Xfer PTube Product to blending Request (004371)">FRM_BLND_XFFER_PTUBE_GO</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="To BLND: Transfer Polishing Tube to Conveyor REQU(XFER REQUEST FLAG) (004401)">SEND_XFER_PTUBE_RQ</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="To BLND: Scrap Polishing Tube REQU(SCRAP REQUEST FLAG) (004402)">SEND_SCRAP_PTUBE_RQ</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Polishing Tube System Mode  Auto (000569)">PTSYS_AUT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="From Blending Outfeed Conveyor Running (004377)">FROM_BLND_OUTFD_RUNNING</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="HMI PTube to Conveyor Xfer Auto Mode RQ (003929)">HMI_XFERTOCONV_AUTO_RQ</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="HMI PTube to Conveyor Transfer Complete Request (003955)">HMI_PT_BLND_XFER_DONE_RQ</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="From BLND - Terminate PTube Transfer Request (004375)">FRM_BLND_TERM_PT_XFER</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Tag: L9_T01_493">L9_T01_493</span>.DN</td> <td class="routine-col">PT_Final_Polish_and_Transfer_18 - L018_Xfer_to_Belt_PT3_2_Start_Bai_413</td> </tr>  </tbody> </table> </body> </html> 

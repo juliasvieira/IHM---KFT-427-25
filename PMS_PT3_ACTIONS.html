@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step PMS_PT3 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step PMS_PT3 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 4<br> <strong>Generated:</strong> 2025-11-24 08:45:44 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">PMS_PT3</td> <td class="action-col"><span class="keyword">MOVE</span> 10 <span class="keyword">TO</span> <span class="tag-tooltip" title="Registers read by blending:Current State of PTub (405197)">TO_BLND_PTUBE_STATE</span> <span class="keyword">IF</span> <span class="tag-tooltip" title="Polishing Tube System Mode  Auto (000569)">PTSYS_AUT</span></td> <td class="routine-col">Blending_System_PLC_Communica_19 - L006_UPDATE_PTUBE_STATE_FOR_BLEND_423</td> </tr>  <tr> <td class="step-col">PMS_PT3</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Polishing Tube System Critical Alarm  Summation (001351)">PTSYS_C_FLTS_SUMM1</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Polishing Tube Drive MS3 Fault/Reset (000324)">PTUBE_FAU</span> <span class="keyword">AND</span> Blending.Sts_Faulted</td> <td class="routine-col">Device_Control_RUN_STOP_FAULT_20 - L003_PTUBE_SYSTEM_CRITICAL_FAULTS_435</td> </tr>  <tr> <td class="step-col">PMS_PT3</td> <td class="action-col"><span class="keyword">MOVE</span> 3 <span class="keyword">TO</span> PTubeMasterSeq_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Polishing Tube System Mode  Auto (000569)">PTSYS_AUT</span></td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">PMS_PT3</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Polishing Tube Idle Light  (WHITE) (000058)">PT_BLND_LT</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="PT Master Polishing Tube is Empty (004198)">PTUBE_IS_EMPTY</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="PT Final Polish SFC Step PT2_7 &quot;Dwell Until Xfer (004231)">TFP_PT2_7</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Polishing Tube System Mode  Fault/Reset (000570)">PTSYS_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="To BLND: Transfer Polishing Tube to Conveyor REQU(XFER REQUEST FLAG) (004401)">SEND_XFER_PTUBE_RQ</span></td> <td class="routine-col">Initialization_MarsPan_Sys_Log_2 - L023_P_TUBE_LIGHT_TO_BLEND_EMPTY_W_26</td> </tr>  </tbody> </table> </body> </html> 

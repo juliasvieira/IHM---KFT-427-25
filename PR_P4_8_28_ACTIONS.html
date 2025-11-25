@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step PR_P4_8_28 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step PR_P4_8_28 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 3<br> <strong>Generated:</strong> 2025-11-24 08:32:21 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">PR_P4_8_28</td> <td class="action-col"><span class="keyword">LATCH</span> <span class="keyword">BIT</span> 28 <span class="keyword">OF</span> SyrupSeq_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> [<span class="keyword">NOT</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.8 &quot;Syrup&quot; (002536)">RE_P4_8</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.9 &quot;Syrup Idle&quot; (002537)">RE_P4_9</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.10 &quot;Priming&quot; (002538)">RE_P4_10</span>]</td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">PR_P4_8_28</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.8 &quot;Syrup&quot; (002536)">RE_P4_8</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MP Recipe Exe Step P4.8 Temporary Storage (002545)">RE_P4_8_TEMP</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.24 &quot;Exec Pot Fill&quot; (002848)">PR_P4_8_24</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.12 &quot;Dry Product&quot; (002857)">PR_P4_8_12</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.25 &quot;Idle&quot; (002849)">PR_P4_8_25</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.29 &quot;Manual Temp Dwell&quot; (002853)">PR_P4_8_29</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step 33 Top Off Shot Pot (Early Fil (002860)">PR_P4_8_33</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.26 &quot;Idle&quot; (002850)">PR_P4_8_26</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.30&quot;Start Auto Temp Dwell&quot; (002854)">PR_P4_8_30</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.19A-Pot Fill for Next Sho (002851)">PR_P4_8_19A</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.31&quot;Store Shot Type Output (002855)">PR_P4_8_31</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.32 &quot;Idle&quot; (002856)">PR_P4_8_32</span></td> <td class="routine-col">Master_Load_Pan_Pre_Coating_5 - L019_MARS_PAN_MASTER_SFC_STP_P4_SY_90</td> </tr>  <tr> <td class="step-col">PR_P4_8_28</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Syrup SFC Trans P4.8.28 to P4.8.29 (002880)">PR_P4_8_28_P4_8_29</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Syrup_Sequence_8 - L029_SYP_SFC_STP_P4_8_28_Get_Temp_158</td> </tr>  </tbody> </table> </body> </html> 
