@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step DRY_P4_4_1 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step DRY_P4_4_1 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 6<br> <strong>Generated:</strong> 2025-11-24 08:14:27 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">DRY_P4_4_1</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Recipe Calling For Temp Control Using Temp CntrlSel Sw (001359)">RECIPETEMPCONTROL</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MP Syrup SFC Step P4.8.30&quot;Start Auto Temp Dwell&quot; (002854)">PR_P4_8_30</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.31&quot;Store Shot Type Output (002855)">PR_P4_8_31</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.32 &quot;Idle&quot; (002856)">PR_P4_8_32</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR Pan Dry  SFC Stp P4.4.2 &quot;Start Fan Dry Duran (003376)">DRY_P4_4_2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR Pan Dry  SFC Step P4.4.3 &quot;Dry Duration&quot; (003377)">DRY_P4_4_3</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR Pan Dry  SFC Step P4.4.4 &quot;Reset after Dry&quot; (003378)">DRY_P4_4_4</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.3 &quot;Wax Polish&quot; (002531)">RE_P4_3</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="MPR Wax Polish  SFC Step P4.3.5 &quot;Re-Initialize&quot; (003529)">WP_P4_3_5</span></td> <td class="routine-col">Air_CFM_and_TEMP_Control_Loop_22 - L003_Determine_Use_of_Moist_Selec_628</td> </tr>  <tr> <td class="step-col">DRY_P4_4_1</td> <td class="action-col"><span class="keyword">MOVE</span> 40401 <span class="keyword">TO</span> PanDrySeq_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">DRY_P4_4_1</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.4 &quot;Dry&quot; (002532)">RE_P4_4</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MPR Pan Dry  SFC Stp P4.4.2 &quot;Start Fan Dry Duran (003376)">DRY_P4_4_2</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR Pan Dry  SFC Step P4.4.3 &quot;Dry Duration&quot; (003377)">DRY_P4_4_3</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MPR Pan Dry  SFC Step P4.4.4 &quot;Reset after Dry&quot; (003378)">DRY_P4_4_4</span></td> <td class="routine-col">Master_Load_Pan_Pre_Coating_5 - L017_MARS_PAN_MASTER_STEP_P4_DRY_88</td> </tr>  <tr> <td class="step-col">DRY_P4_4_1</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MPR Pan Dry  SFC Trans P4.4.1To P4.4.2 (003387)">DRY_P4_4_1_P4_4_2</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Main Fan At Commanded Speed (003840)">MAIN_FAN_AT_SPD</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Main Fan At Zero Speed (003839)">MAIN_FAN_AT_ZERO_SPD</span></td> <td class="routine-col">Pan_Dry_Sequence_11 - L002_PAN_DRY_SFC_STP_P4_4_1_New_S_213</td> </tr>  <tr> <td class="step-col">DRY_P4_4_1</td> <td class="action-col"><span class="keyword">MOVE</span> <span class="tag-tooltip" title="Recipe Current Shot Main Air Fan CFM (402009)">CS_MAIN_FAN_CFM</span> <span class="keyword">TO</span> <span class="tag-tooltip" title="Main Air Fan Speed Setpoint (405588)">MAFAN_SPD_SETP</span> <span class="keyword">IF</span> <span class="keyword"><span class="tag-tooltip" title="Tag: ONE">ONE</span>-<span class="tag-tooltip" title="Tag: SHOT">SHOT</span></span>[xONS.x[387]]<br><span class="keyword">MOVE</span> <span class="tag-tooltip" title="Recipe Current Shot Mars Pan Speed (402011)">CS_MPAN_R_SPEED</span> <span class="keyword">TO</span> <span class="tag-tooltip" title="Mars Pan Speed Setpoint (405587)">MP_SPD_SETP</span> <span class="keyword">IF</span> <span class="keyword"><span class="tag-tooltip" title="Tag: ONE">ONE</span>-<span class="tag-tooltip" title="Tag: SHOT">SHOT</span></span>[xONS.x[387]]<br><span class="keyword">MOVE</span> <span class="tag-tooltip" title="Last Value for Main Air Fan PID MVOut-Recipe Dry (403644)">DRY_LSTMAF</span> <span class="keyword">TO</span> <span class="tag-tooltip" title="Main Air Fan Output (403048)">MAF_MV</span> <span class="keyword">IF</span> <span class="keyword"><span class="tag-tooltip" title="Tag: ONE">ONE</span>-<span class="tag-tooltip" title="Tag: SHOT">SHOT</span></span>[xONS.x[387]]</td> <td class="routine-col">Pan_Dry_Sequence_11 - L003_Pan_Dry_P4_4_1_Assign_New_Se_214</td> </tr>  <tr> <td class="step-col">DRY_P4_4_1</td> <td class="action-col"><span class="keyword">MOVE</span> <span class="tag-tooltip" title="Dry Seq. Last Output of PID Loop (403641)">DRY_AIR_PID_LAST_OUTPUT</span> <span class="keyword">TO</span> <span class="tag-tooltip" title="AIR TEMP - PID Output (409323)">A_TPID_MV</span> <span class="keyword">IF</span> <span class="keyword"><span class="tag-tooltip" title="Tag: ONE">ONE</span>-<span class="tag-tooltip" title="Tag: SHOT">SHOT</span></span>[xONS.x[391]]</td> <td class="routine-col">Pan_Dry_Sequence_11 - L004_Delay_Using_Last_Output_for_x_215</td> </tr>  </tbody> </table> </body> </html> 

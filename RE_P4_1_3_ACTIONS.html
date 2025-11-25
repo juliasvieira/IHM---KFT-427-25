@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step RE_P4_1_3 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step RE_P4_1_3 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 4<br> <strong>Generated:</strong> 2025-11-24 08:12:46 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">RE_P4_1_3</td> <td class="action-col"><span class="keyword">MOVE</span> 40103 <span class="keyword">TO</span> PrepSystem_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">RE_P4_1_3</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.1 &quot;Prepare System&quot; (002525)">RE_P4_1</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.1.1 &quot;Initialization&quot; (002526)">RE_P4_1_1</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.1.2 &quot;Execute Prime Seqence&quot; (002527)">RE_P4_1_2</span></td> <td class="routine-col">Master_Load_Pan_Pre_Coating_5 - L015_MARS_PAN_MASTER_STEP_P4_PREPA_86</td> </tr>  <tr> <td class="step-col">RE_P4_1_3</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Trans P4.1.3 To P4.2 (002548)">RE_P4_1_3_P4_2</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MPR A Wash  SFC Trans AW4 to AW1 (002725)">AW_AW6_AW_1</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Prepare_Sys_Recipe_Execution_6 - L005_RECIPE_EXE_SFC_STP_4_1_3_A_W_104</td> </tr>  <tr> <td class="step-col">RE_P4_1_3</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MPR A Wash  SFC Trans AW1To AW2 (002722)">AW_AW1_AW2</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="MPR A Wash  SFC Step AW1 &quot;Idle&quot; (002710)">AW_AW1</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Force Off Syrup Operation (003018)">FORCEOFFSYRUPOPERATION</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Syrup SFC Step P4.8.21 &quot;Exec A Wash&quot; (002845)">PR_P4_8_21</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 12-&quot;A&quot; Wash (002972)">AS_12_A_WASH</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Auto Sht Dwn SFC Stp 23-&quot;A&quot; Wash (002983)">AS_23_A_WASH</span></td> <td class="routine-col">Prime_A_Wash_and_B_Wash_7 - L008_x_A_WASH_SFC_STEP_AW1_Idle_120</td> </tr>  </tbody> </table> </body> </html> 

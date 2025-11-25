@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Step RE_P4_5 Actions</title> <style> body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; } h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; } table { border-collapse: collapse; width: 100%; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; } th { background-color: #3498db; color: white; padding: 16px 20px; text-align: left; font-weight: bold; border: 1px solid #2980b9; } td { border: 1px solid #ddd; padding: 10px; vertical-align: top; } tr:nth-child(even) { background-color: #f9f9f9; } tr:hover { background-color: #e8f4f8; } .keyword { font-weight: bold; color: #e74c3c; } .step-col { font-weight: bold; color: #2c3e50; width: 10%; } .action-col { font-family: 'Courier New', monospace; white-space: pre-wrap; width: 60%; } .routine-col { color: #7f8c8d; font-size: 0.9em; width: 30%; } .header-info { background-color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .action-separator { display: block; height: 0.8em; } .tag-tooltip {
+    cursor: help;
+    position: relative;
+    text-decoration: none;
+    border:none;
+}
+
+.tag-tooltip:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tag-tooltip[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: none;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.tag-tooltip[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -5px;
+} </style> </head> <body> <h1>🔍 Step RE_P4_5 - Actions</h1> <div class="header-info"> <strong>Total References:</strong> 4<br> <strong>Generated:</strong> 2025-11-24 08:09:07 </div> <table> <thead> <tr> <th>STEP</th> <th>ACTION</th> <th>PROGRAM - ROUTINE</th> </tr> </thead> <tbody>  <tr> <td class="step-col">RE_P4_5</td> <td class="action-col"><span class="keyword">MOVE</span> 17 <span class="keyword">TO</span> <span class="tag-tooltip" title="Registers read by blending:Current State of MPan (405196)">TO_BLND_MPAN_STATE</span> <span class="keyword">IF</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Blending_System_PLC_Communica_19 - L003_UPDATE_PAN_STATUS_FOR_BLENDI_420</td> </tr>  <tr> <td class="step-col">RE_P4_5</td> <td class="action-col"><span class="keyword">MOVE</span> 405 <span class="keyword">TO</span> RecipeExe_B4Off <span class="keyword">IF</span> <span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span></td> <td class="routine-col">Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td> </tr>  <tr> <td class="step-col">RE_P4_5</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="Mars Pan Alarm Light (AMBER) (000051)">MP_ALM_LT</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Fault/Reset (000564)">PANSYS_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Polishing Tube System Mode  Fault/Reset (000570)">PTSYS_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="FAST FLASHING BIT (001933)">FAST_FLASHER</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Spray Arm Extender SOL7 Fault/Reset (000312)">SAEXT_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Summation of valve faults for T1, T2 and Shot Po (001945)">TANK_VALVE_FLT_SUM</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Step P4.6 &quot;Auto Shutdown&quot; (002540)">RE_P4_6</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Product Infeed SOL5 Fault/Reset (000300)">MPIN_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Inlet Air PID Temperature High Alarm (001361)">TPID_HIGH_ALM</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="DeBounced Pan Chute Is Blocked (003780)">PANCHUTEBLOCKEDDEBOUNCED</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Duct Heater Run Timeout (001076)">DUCTHTR_RTO</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Duct Heater Fault/Reset (000294)">DUCTHTR_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Mars Pan Inlet Air PID Temperature Low Alarm (001362)">TPID_LOW_ALM</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Gum/Wax Seq is active, turn on MPan light on pol (003673)">GUMWXON</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Syrup Shot Pot Recirc Pump MS1 Fault/Reset (000276)">SSPR_FAU</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="MP Master Seq Critical Fault-Suspend Load Seq. (002444)">MS_LOAD_SUSPEND</span> <span class="keyword">AND</span> <span class="tag-tooltip" title="Spray Arm Slide Door SOL6 Fault/Reset (000306)">SADOOR_FAU</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Syrup Shot Pot Emergency High Level (Plug A) (100050)">SSP_EHI_LVL</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Tank #1 Emerg. High Level (100045)">T1_EHI_LVL</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="Tank #2 Emerg. High Level (100063)">T2_EHI_LVL</span></td> <td class="routine-col">Initialization_MarsPan_Sys_Log_2 - L019_MARS_PAN_ALARM_LIGHT_AMBER_22</td> </tr>  <tr> <td class="step-col">RE_P4_5</td> <td class="action-col"><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Trans P4.5 to P4.2 (002558)">RE_P4_5_P4_2</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="Shutdown Prep SFC Step SP6-Execute Recipe (002936)">SP_6_EXECUTERECIPE</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="Shutdown Prep SFC Step SP5-Go To Shutdown (002935)">SP_5_GOSHUTDOWN</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Trans P4.5 to P4.2 (002558)">RE_P4_5_P4_2</span>]<br><br><span class="action-separator"></span><br><span class="keyword">SET</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Trans P4.5 to P4.6 (002561)">RE_P4_P4_6</span> <span class="keyword">IF</span><br><span class="tag-tooltip" title="Pan System Mode  Auto (000563)">PANSYS_AUT</span> <span class="keyword">AND</span> [<span class="tag-tooltip" title="Shutdown Prep SFC Step SP6-Execute Recipe (002936)">SP_6_EXECUTERECIPE</span> <span class="keyword">OR</span> <span class="tag-tooltip" title="Shutdown Prep SFC Step SP5-Go To Shutdown (002935)">SP_5_GOSHUTDOWN</span> <span class="keyword">AND</span> <span class="keyword">NOT</span> <span class="tag-tooltip" title="MP Recipe Exe SFC Trans P4.5 to P4.2 (002558)">RE_P4_5_P4_2</span>]</td> <td class="routine-col">Prepare_Sys_Recipe_Execution_6 - L009_RCP_EXE_SFC_Stp_P4_5_Shtdwn_x_108</td> </tr>  </tbody> </table> </body> </html> 

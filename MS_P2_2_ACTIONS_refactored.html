@@ -1,0 +1,67 @@
+<html><head><meta charset="utf-8"><title>Actions</title></head><body>
+<h1>Step MS_P2_2 - Actions</h1>
+<table border='1' style='border-collapse:collapse'>
+<tr><th>STEP</th><th>ACTION</th><th>PROGRAM - ROUTINE</th></tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>MOVE AIR_PID_LAST_OUTPUT TO A_TPID_MV IF XIC(TEMPPID_SFC_STPT3) AND MOV(AIR_PID_LAST_OUTPUT,A_TPID_MV) ;</pre></td>
+<td>Air_CFM_and_TEMP_Control_Loop_22 - L016_More_Last_Outputs_641</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>SET MPINF_OPEN IF
+[ AND XIC(PANSYS_AUT) XIO(MPIN_FAU) AND OTE(MPINF_OPEN) , OTE(MPIN_ON)
+
+SET MPIN_ON IF
+[ AND XIC(PANSYS_AUT) XIO(MPIN_FAU) AND OTE(MPINF_OPEN) , OTE(MPIN_ON)</pre></td>
+<td>Device_Control_RUN_STOP_FAULT_20 - L029_MP_PRODUCT_INFEED_DEVICE_CON_461</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>SET HMI_MSG_INFD_FAU IF
+[ XIO(MPAN_INFD_CHUTE) , XIC(MPIN_FAU) ] , XIC(MS_LOAD_SUSPEND)] [
+
+SET TO_BLND_PAUSE_LOAD IF
+[ XIO(MPAN_INFD_CHUTE) , XIC(MPIN_FAU) ] , XIC(MS_LOAD_SUSPEND)] [</pre></td>
+<td>HMI_Bits_and_Registers_15 - L004_Infd_Fault_During_Load_Seque_309</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>MOVE 202 TO LoadPanSeq_B4Off IF XIC(PANSYS_AUT) AND MOV(202,LoadPanSeq_B4Off)] ;</pre></td>
+<td>Hot_Standby_1 - L002_STAT_Block_Instruction_Support_2</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>MOVE LDP_MAF_SPD TO MAFAN_SPD_SETP IF XIC(MS_P2_2) ONS(xONS.x AND ONS(xONS.x[83]) MOV(LDP_MAF_SPD,MAFAN_SPD_SETP) MOV(LDP_MP_SPD,MP_SPD_SETP) MOV(LD_PAN_TEMP_SP,A_TEMP_CUR_SETP) MOV(MPFAN_LAST_OUTPUT,MAF_MV) ;
+
+MOVE LDP_MP_SPD TO MP_SPD_SETP IF XIC(MS_P2_2) ONS(xONS.x AND ONS(xONS.x[83]) MOV(LDP_MAF_SPD,MAFAN_SPD_SETP) MOV(LDP_MP_SPD,MP_SPD_SETP) MOV(LD_PAN_TEMP_SP,A_TEMP_CUR_SETP) MOV(MPFAN_LAST_OUTPUT,MAF_MV) ;
+
+MOVE LD_PAN_TEMP_SP TO A_TEMP_CUR_SETP IF XIC(MS_P2_2) ONS(xONS.x AND ONS(xONS.x[83]) MOV(LDP_MAF_SPD,MAFAN_SPD_SETP) MOV(LDP_MP_SPD,MP_SPD_SETP) MOV(LD_PAN_TEMP_SP,A_TEMP_CUR_SETP) MOV(MPFAN_LAST_OUTPUT,MAF_MV) ;
+
+MOVE MPFAN_LAST_OUTPUT TO MAF_MV IF XIC(MS_P2_2) ONS(xONS.x AND ONS(xONS.x[83]) MOV(LDP_MAF_SPD,MAFAN_SPD_SETP) MOV(LDP_MP_SPD,MP_SPD_SETP) MOV(LD_PAN_TEMP_SP,A_TEMP_CUR_SETP) MOV(MPFAN_LAST_OUTPUT,MAF_MV) ;</pre></td>
+<td>Master_Load_Pan_Pre_Coating_5 - L007_LD_PAN_P2_2_Start_Load_78</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>SET MS_P2_2_P3 IF
+XIC(PANSYS_AUT) XIC(FRM_BLND_LOAD_PAN_CMPLT)</pre></td>
+<td>Master_Load_Pan_Pre_Coating_5 - L007_LD_PAN_P2_2_Start_Load_78</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>SET MS_P2</pre></td>
+<td>Master_Load_Pan_Pre_Coating_5 - L008_MARS_PAN_MASTER_SFC_STP_P2_Lo_79</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>SET MS_LOAD_SUSPEND IF
+]</pre></td>
+<td>Master_Load_Pan_Pre_Coating_5 - L009_CFault_or_Off_During_Load_Seq_80</td>
+</tr>
+<tr>
+<td>MS_P2_2</td>
+<td><pre>SET CURRENT_RECIPE_CENTER_MIN_CNTR IF
+TON(L9_T01_938,?,?) , XIC(L9_T01_938.DN)</pre></td>
+<td>_21_Cycle_Report_23 - L005_Pan_Waiting_on_Centers_676</td>
+</tr>
+</table></body></html>
